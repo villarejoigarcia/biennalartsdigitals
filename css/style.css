@@ -94,8 +94,7 @@ body>p {
   cursor: pointer;
 }
 
-.download-svg:hover,
-.style-menu a:hover {
+.download-svg:hover {
   color: #f5f5f5;
   background: #5e5e5e;
 }

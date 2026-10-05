@@ -28,7 +28,7 @@ function setup() {
 // }
 
 function draw() {
-  background(255);
+  background('#f5f5f5');
   noStroke();
   rectMode(CENTER);
 
