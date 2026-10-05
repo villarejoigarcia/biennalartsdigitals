@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo 2 · Biennal d'Arts Digitals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/p5.js-svg@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
+</head>
+<body>
+    <p>Biennal d'Arts Digitals</p>
+    <nav class="style-menu" aria-label="Seleccionar estilo">
+        <a href="biennal_style_1.html">Estilo 1</a>
+        <a href="biennal_style_2.html" aria-current="page">Estilo 2</a>
+        <a href="biennal_style_3.html">Estilo 3</a>
+    </nav>
+    <div class="text-controls">
+        <label class="text-editor">
+            Texto
+            <input id="text-input" type="text" value="Més enllà de la pantalla" aria-label="Editar texto del diseño">
+        </label>
+        <button id="download-svg" class="download-svg" type="button">Descargar SVG</button>
+    </div>
+    <script src="js/styles/biennal_style_2.js"></script>
+</body>
+</html>

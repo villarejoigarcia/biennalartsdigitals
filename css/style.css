@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Riforma';
+  src: url(/assets/RiformaLL-Regular.otf);
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: Times;
+  font-size: 13px;
+  background-color: #f5f5f5;
+}
+
+body {
+  overflow: hidden;
+}
+
+body>p {
+  position: fixed;
+  top: .67em;
+  left: .67em;
+}
+
+.style-menu {
+  position: fixed;
+  top: .67em;
+  left: 33%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .67em;
+  /* padding: 6px 8px; */
+  /* color: #5e5e5e; */
+  /* background: #e1e1e1; */
+}
+
+.style-menu a {
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.style-menu a:hover,
+.style-menu a[aria-current="page"] {
+  color: #5e5e5e;
+  background: #e1e1e1;
+  /* text-decoration: underline; */
+}
+
+.text-controls {
+  position: fixed;
+  top: .67em;
+  right: .67em;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .67em;
+}
+
+.text-editor {
+  display: flex;
+  align-items: center;
+  /* gap: 8px; */
+  color: #ccc;
+  /* background: #e1e1e1; */
+}
+
+.text-editor input {
+  width: min(32vw, 320px);
+  min-width: 140px;
+  /* padding: 3px 5px; */
+  margin-left: .67em;
+  border: 0;
+  border-radius: 0;
+  color: #5e5e5e;
+  background: #f5f5f5;
+  font: inherit;
+  border-bottom: 1px solid #5e5e5e;
+}
+
+.download-svg {
+  padding: 0;
+  color: #5e5e5e;
+  background: #e1e1e1;
+  cursor: pointer;
+}
+
+.download-svg:hover,
+.style-menu a:hover {
+  color: #f5f5f5;
+  background: #5e5e5e;
+}
+
+button {
+  all: unset;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+}
+
+.button-list {
+  position: fixed;
+  display: flex;
+  top: .67em;
+  left: .67em;
+  width: max-content;
+  z-index: 1;
+  gap: 2px;
+  padding: 2px;
+}
+
+.button-list::before {
+  content: '';
+  position: absolute;
+  background-color: #e1e1e1;
+  filter: blur(2px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+}
+
+.button-list button {
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  /* padding: 8px 10px; */
+  background: #e1e1e1;
+  cursor: pointer;
+  color: #5e5e5e;
+}
+
+/* .button-list button:hover {
+  border-color: #111;
+} */
+
+.button-list button.is-active {
+  /* background: #111; */
+  /* color: rgb(200,200,200); */
+  /* color: black; */
+  background: #5e5e5e;
+  color: #f5f5f5;
+  /* border-color: #111; */
+}
+
+.sketch-stage {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+/*sliders*/
+
+#sliders {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  display: flex;
+  gap: 5px;
+  width: 50vw;
+}
+
+.ui-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 220px;
+  /* height: 16px; */
+  background: #5a5a5a;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  margin: 10px 5px;
+  transform: rotate(180deg);
+}
+
+.ui-slider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left:50%;
+  width: calc(100% + (10px));
+  height: 20px;
+  border-radius: 2px;
+  background: #e1e1e1;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+.ui-slider::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  background: #5a5a5a;
+  z-index: -1;
+}
+
+button {
+  background: #5a5a5a;
+  color: #f5f5f5;
+  padding: 5px 10px 2.5px 10px;
+  border-radius: 2px;
+  line-height: 1em;
+}
+
+#buttons {
+  display: flex;
+  position: absolute;
+  bottom: 13px;
+  left: 490px;
+  gap: 2px;
+}
+
+/**/
+
+
+.ui-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  /* background: rgb(200,200,200); */
+  background: #5a5a5a;
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+
+.ui-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  /* background: #ff00ff; */
+  border: 2px solid #111;
+  cursor: pointer;
+}
