@@ -1,8 +1,8 @@
 let font;
 // const txt = "Biennal d'Arts Digitals";
 let txt = "Més enllà de la pantalla";
-const purple = '#a475fa';
-const brown = '#6f3116';
+const purple = '#a26afc';
+const brown = '#6f2206';
 
 function preload() {
   font = loadFont('assets/NEXTPanBook-Regular.otf');

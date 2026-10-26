@@ -1,8 +1,8 @@
 let font;
 // const txt = "2026";
 let txt = "Més enllà de la pantalla";
-const purple = '#a475fa';
-const brown = '#6f3116';
+const purple = '#a26afc';
+const brown = '#6f2206';
 const grey = '#9b9b9b';
 
 function preload() {
